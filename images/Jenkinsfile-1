@@ -24,6 +24,7 @@ pipeline {
                  sed -i "s/ami-stack-'[0-9]*$'/'${AMI_ID}'/" ./image.pkr.hcl 
                  export PACKER_LOG=1
                  export PACKER_LOG_PATH=$WORKSPACE/packer.log
+                 /usr/bin/packer plugins install github.com/hashicorp/amazon
                  /usr/bin/packer build -force image.pkr.hcl 
                  '''
                
