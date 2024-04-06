@@ -8,7 +8,7 @@ variable "aws_instance_type" {
 }
 
 variable "ami_name" {
-  default = "ami-stack-1.0"
+  default = "ami-stack-1.2"
 }
 
 variable "component" {
